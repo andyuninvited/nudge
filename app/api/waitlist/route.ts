@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID ?? "";
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const audienceId = process.env.RESEND_AUDIENCE_ID ?? "";
     const { name, email } = await request.json();
 
     if (!email || typeof email !== "string") {
@@ -16,7 +17,7 @@ export async function POST(request: Request) {
     await resend.contacts.create({
       email,
       firstName: name ?? "",
-      audienceId: AUDIENCE_ID,
+      audienceId,
     });
 
     // Send thank-you email
