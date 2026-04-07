@@ -84,17 +84,13 @@ export default function Home() {
           <div className="animate-fade-in-up-delay-3 mb-4">
             <WaitlistForm variant="hero" />
             <p className="text-muted text-sm mt-3">
-              Price goes up at launch. 30-day money back. No spam.
+              Pre-signups get launch pricing. No spam.
             </p>
           </div>
 
-          <p className="text-muted text-sm mt-8 mb-6">
-            Join founders who are done managing their CRM.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-8 text-center">
+          <div className="flex flex-wrap justify-center gap-8 text-center mt-10">
             {[
-              ["$49/yr", "Founding price"],
+              ["Free to start", "Paid plans at launch"],
               ["< 60s", "Setup time"],
               ["Your data", "In your own Google Sheet"],
             ].map(([stat, label]) => (
@@ -127,6 +123,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <section className="py-12 px-6">
+        <div className="max-w-md mx-auto text-center">
+          <ScrollFade>
+            <p className="text-muted mb-4">If any of that hit close to home, you&apos;re not alone.</p>
+            <WaitlistForm variant="hero" />
+          </ScrollFade>
+        </div>
+      </section>
+
+      {/* Founder story */}
+      <section className="py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <ScrollFade>
+            <div className="bg-surface border border-border rounded-xl p-8 md:p-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">Why I&apos;m building this</h2>
+              <div className="space-y-4 text-muted text-lg leading-relaxed">
+                <p>
+                  I&apos;m Andy. I&apos;ve started multiple companies and the one thing that never
+                  changes is this: I love meeting new customers, but I&apos;m terrible at
+                  following up with them.
+                </p>
+                <p>
+                  I&apos;ve tried the CRMs. All of them. They make me feel like I&apos;m managing
+                  software instead of managing relationships. So I always end up back in a
+                  spreadsheet. It&apos;s simple. It stays out of my way. But it doesn&apos;t
+                  remind me to follow up, and that&apos;s where deals die.
+                </p>
+                <p>
+                  Nudge is the tool I wanted to exist. A Sheet-backed sidebar that sits in Gmail,
+                  holds my notes, and gives me a tap on the shoulder before something goes cold.
+                  No pipeline stages. No dashboards. Just the follow-up.
+                </p>
+                <p className="text-text font-medium">
+                  I&apos;m building it for myself. If it sounds like something you&apos;d use too,
+                  sign up and help shape what it becomes.
+                </p>
+              </div>
+            </div>
+          </ScrollFade>
+        </div>
+      </section>
+
       {/* How it works */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
@@ -152,13 +191,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Post-steps CTA */}
+      <section className="py-12 px-6">
+        <div className="max-w-md mx-auto text-center">
+          <ScrollFade>
+            <p className="text-muted mb-4">That&apos;s the whole thing. No learning curve.</p>
+            <WaitlistForm variant="hero" />
+          </ScrollFade>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <ScrollFade>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Simple pricing. No surprises.
             </h2>
+            <p className="text-center text-muted mb-16">
+              Nudge starts free. Paid features unlock when we launch. Pre-signups get the best price.
+            </p>
           </ScrollFade>
           <ScrollFade>
             <PricingCards />
@@ -237,7 +289,7 @@ export default function Home() {
               Ready to stop losing deals because you forgot to follow up?
             </h2>
             <p className="text-lg text-muted mb-10">
-              Get founding access at $49/year &mdash; locked forever when we launch.
+              Sign up for founding access. We&apos;ll let you know the moment it&apos;s ready.
             </p>
             <WaitlistForm />
           </ScrollFade>

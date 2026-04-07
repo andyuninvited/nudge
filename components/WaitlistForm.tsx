@@ -54,7 +54,7 @@ export default function WaitlistForm({ variant = "bottom" }: WaitlistFormProps) 
           disabled={status === "loading"}
           className="px-6 py-3 rounded-lg bg-amber font-semibold text-black hover:bg-amber/90 transition-colors whitespace-nowrap disabled:opacity-50"
         >
-          {status === "loading" ? "..." : "Get Founding Access — $49/year"}
+          {status === "loading" ? "..." : "Get Founding Access"}
         </button>
       </form>
     );

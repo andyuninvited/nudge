@@ -19,10 +19,6 @@ const paidFeatures = [
 ];
 
 export default function PricingCards() {
-  const scrollToWaitlist = () => {
-    document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
       {/* Free tier */}
@@ -45,18 +41,18 @@ export default function PricingCards() {
       </div>
 
       {/* Paid tier */}
-      <div className="rounded-xl border-2 border-amber bg-surface p-8 relative">
+      <div className="rounded-xl border border-border bg-surface p-8">
         <div className="flex items-center gap-3 mb-2">
           <h3 className="text-xl font-bold">The Closer</h3>
           <span className="text-xs px-2 py-1 rounded-full bg-amber/20 text-amber font-medium">
-            Founding Price
+            Coming at launch
           </span>
         </div>
         <p className="text-2xl font-bold mb-1">
           $49<span className="text-base font-normal text-muted">/year</span>
         </p>
-        <p className="text-muted text-sm mb-6">$7/mo after launch</p>
-        <ul className="space-y-3 mb-8">
+        <p className="text-muted text-sm mb-6">Pre-signups get launch pricing</p>
+        <ul className="space-y-3">
           {paidFeatures.map((f) => (
             <li key={f} className="flex items-start gap-2 text-muted">
               <span className="text-amber mt-0.5">&#10003;</span>
@@ -64,12 +60,6 @@ export default function PricingCards() {
             </li>
           ))}
         </ul>
-        <button
-          onClick={scrollToWaitlist}
-          className="w-full py-3 rounded-lg bg-amber font-semibold text-black hover:bg-amber/90 transition-colors"
-        >
-          Lock in $49/year &rarr;
-        </button>
       </div>
     </div>
   );
