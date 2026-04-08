@@ -22,14 +22,14 @@ export async function POST(request: Request) {
 
     // Send thank-you email
     await resend.emails.send({
-      from: "Nudge <hello@nudgesidebar.com>",
+      from: "Nudge <no-reply@account.nudgesidebar.com>",
       to: email,
       subject: "You're in. We'll nudge you when it's ready.",
       html: `
         <div style="font-family: Inter, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px; color: #F5F5F5; background: #0F0F0F;">
           <h1 style="font-size: 24px; margin-bottom: 16px;">Welcome to Nudge${name ? `, ${name}` : ""}</h1>
           <p style="color: #9CA3AF; font-size: 16px; line-height: 1.6;">
-            You locked in founding access at $49/year. When we launch, you'll be first in line.
+            You're on the founding access list. When we launch, you'll be first in line with the best pricing.
           </p>
           <p style="color: #9CA3AF; font-size: 16px; line-height: 1.6; margin-top: 16px;">
             In the meantime, keep losing deals the old-fashioned way. We'll fix that soon.
