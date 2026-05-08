@@ -6,7 +6,7 @@ import ScrollFade from "@/components/ScrollFade";
 const problems = [
   {
     quote: "I've tried every CRM. They all make me feel like I'm doing it wrong.",
-    attr: "founder",
+    attr: "mortgage loan officer",
   },
   {
     quote: "I went back to a spreadsheet. It's simple, but it never follows up with me.",
@@ -14,11 +14,30 @@ const problems = [
   },
   {
     quote: "I have proposals out there that I genuinely forgot about.",
-    attr: "freelancer",
+    attr: "realtor",
   },
   {
     quote: "I lost a $8,000 deal because I waited too long to follow up.",
     attr: "founder",
+  },
+];
+
+const faqs = [
+  {
+    q: "Does this replace my CRM?",
+    a: "If you're a solo founder, consultant, or loan officer, probably yes. If you have a team of 5+ doing sales, you might want Streak or HubSpot. Nudge is built for one person who just needs to not forget things.",
+  },
+  {
+    q: "Do I need to set anything up?",
+    a: "Install, connect your Google account, done. No onboarding flow. No required fields. You can add your first contact in 10 seconds.",
+  },
+  {
+    q: "What happens to my data if I cancel?",
+    a: "It stays in your Google Sheet. Always. It's yours.",
+  },
+  {
+    q: "When does it launch?",
+    a: "We're validating with founding users now. The Chrome extension ships when we hit 100 founding signups. Early users lock in $49/year for life.",
   },
 ];
 
@@ -76,9 +95,11 @@ export default function Home() {
           </h1>
 
           <p className="animate-fade-in-up-delay-2 text-lg text-muted max-w-2xl mx-auto mb-10">
-            Nudge lives in your Gmail sidebar. Drop a quick note, set a follow-up date, and
-            we&apos;ll remind you before the deal goes cold. No CRM to manage. No fields to fill.
-            Just a nudge when you need it.
+            Drop a note. Get a nudge. Close more deals.
+            <br />
+            No pipelines. No setup. No CRM to manage.
+            <br />
+            Just a sidebar in Gmail and a reminder when a contact goes cold.
           </p>
 
           <div className="animate-fade-in-up-delay-3 mb-4">
@@ -107,7 +128,23 @@ export default function Home() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <ScrollFade>
-            <h2 className="text-3xl md:text-4xl font-bold mb-12">Sound familiar?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Sound familiar?</h2>
+          </ScrollFade>
+
+          <ScrollFade>
+            <div className="space-y-4 text-lg text-muted leading-relaxed mb-12">
+              <p>You&apos;ve tried CRMs. They all make you feel like you&apos;re doing it wrong.</p>
+              <p>
+                Salesforce wants an admin. HubSpot wants a team. Notion wants your evenings.
+              </p>
+              <p>
+                So you went back to a spreadsheet. It&apos;s simple. It stays out of your way. You
+                understand it.
+              </p>
+              <p className="text-text font-medium">
+                But it never follows up with you. And deals die in silence.
+              </p>
+            </div>
           </ScrollFade>
 
           <div className="space-y-4">
@@ -273,6 +310,26 @@ export default function Home() {
               </div>
             </div>
           </ScrollFade>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <ScrollFade>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Questions, answered.</h2>
+          </ScrollFade>
+
+          <div className="space-y-6">
+            {faqs.map((f, i) => (
+              <ScrollFade key={f.q} delay={i * 75}>
+                <div className="border border-border bg-surface rounded-xl p-6">
+                  <h3 className="font-semibold text-text mb-2">{f.q}</h3>
+                  <p className="text-muted leading-relaxed">{f.a}</p>
+                </div>
+              </ScrollFade>
+            ))}
+          </div>
         </div>
       </section>
 
