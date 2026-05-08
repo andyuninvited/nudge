@@ -49,7 +49,7 @@ export default function PricingCards() {
           </span>
         </div>
         <p className="text-2xl font-bold mb-1">
-          $49<span className="text-base font-normal text-muted">/year</span>
+          $79<span className="text-base font-normal text-muted">/year</span>
         </p>
         <p className="text-muted text-sm mb-6">Pre-signups get launch pricing</p>
         <ul className="space-y-3">
